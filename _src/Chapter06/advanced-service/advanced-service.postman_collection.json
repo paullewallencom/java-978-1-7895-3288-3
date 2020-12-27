@@ -1,0 +1,322 @@
+{
+  "info": {
+    "name": "Advanced Service",
+    "_postman_id": "7ea9aa26-9b3a-4f19-9c42-31bd0594751b",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Metrics",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "",
+            "value": "",
+            "disabled": true
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/metrics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "metrics"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "GET Metrics for Prometheus",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/metrics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "metrics"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "GET Healthcheck",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "health"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "POST Timed Metric",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/metrics/timed",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "metrics",
+            "timed"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "POST Gauge Metric",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/metrics/gauge",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "metrics",
+            "gauge"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "POST Counted Metric",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/metrics/counted",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "metrics",
+            "counted"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "GET Books list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/validation/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "validation",
+            "books"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "GET Invalid Book",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/validation/books/4711",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "validation",
+            "books",
+            "4711"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "GET Valid Book",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/validation/books/0345391802",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "validation",
+            "books",
+            "0345391802"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "POST new valid book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"isbn\": \"1234567890\",\n    \"title\": \"Building webservices with Java EE 8\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/validation/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "validation",
+            "books"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "POST invalid book",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"isbn\": \"1234567890\",\n    \"title\": \"\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/validation/books",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "validation",
+            "books"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "GET JSON Web Token Authentication",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJCdWlsZGluZyBXZWJzZXJ2aWNlcyB3aXRoIEphdmEgRUUiLCJuYW1lIjoiTWFyaW8tTGVhbmRlciBSZWltZXIiLCJpYXQiOjE1MTYyMzkwMjJ9.jBVXzNXmZBMxER98TbjvaHMrEe3z1JKnOzcJE4X93Og"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "http://localhost:8080/advanced-service/api/jwt/authenticate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "advanced-service",
+            "api",
+            "jwt",
+            "authenticate"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
